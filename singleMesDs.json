@@ -1,0 +1,276 @@
+{
+  "groupMapping": {
+    "NO_GROUP": [
+      {
+        "categoryId": "R0-%-Amarilla",
+        "dataRowId": "NO_GROUP~**~R0-%-Amarilla"
+      },
+      {
+        "categoryId": "R0-%-Carretera",
+        "dataRowId": "NO_GROUP~**~R0-%-Carretera"
+      },
+      {
+        "categoryId": "R0-%-Montana",
+        "dataRowId": "NO_GROUP~**~R0-%-Montana"
+      },
+      {
+        "categoryId": "R0-%-Paseo",
+        "dataRowId": "NO_GROUP~**~R0-%-Paseo"
+      },
+      {
+        "categoryId": "R0-%-Velo",
+        "dataRowId": "NO_GROUP~**~R0-%-Velo"
+      },
+      {
+        "categoryId": "R0-%-VTT",
+        "dataRowId": "NO_GROUP~**~R0-%-VTT"
+      }
+    ],
+    "TOTAL_GROUP": [
+      {
+        "dataRowId": "TOTAL_GROUP~**~R0-%-Amarilla",
+        "categoryId": "R0-%-Amarilla"
+      },
+      {
+        "dataRowId": "TOTAL_GROUP~**~R0-%-Carretera",
+        "categoryId": "R0-%-Carretera"
+      },
+      {
+        "dataRowId": "TOTAL_GROUP~**~R0-%-Montana",
+        "categoryId": "R0-%-Montana"
+      },
+      {
+        "dataRowId": "TOTAL_GROUP~**~R0-%-Paseo",
+        "categoryId": "R0-%-Paseo"
+      },
+      {
+        "dataRowId": "TOTAL_GROUP~**~R0-%-Velo",
+        "categoryId": "R0-%-Velo"
+      },
+      {
+        "dataRowId": "TOTAL_GROUP~**~R0-%-VTT",
+        "categoryId": "R0-%-VTT"
+      }
+    ],
+    "AVERAGE_GROUP": [
+      {
+        "dataRowId": "AVERAGE_GROUP~**~R0-%-Amarilla",
+        "categoryId": "R0-%-Amarilla"
+      },
+      {
+        "dataRowId": "AVERAGE_GROUP~**~R0-%-Carretera",
+        "categoryId": "R0-%-Carretera"
+      },
+      {
+        "dataRowId": "AVERAGE_GROUP~**~R0-%-Montana",
+        "categoryId": "R0-%-Montana"
+      },
+      {
+        "dataRowId": "AVERAGE_GROUP~**~R0-%-Paseo",
+        "categoryId": "R0-%-Paseo"
+      },
+      {
+        "dataRowId": "AVERAGE_GROUP~**~R0-%-Velo",
+        "categoryId": "R0-%-Velo"
+      },
+      {
+        "dataRowId": "AVERAGE_GROUP~**~R0-%-VTT",
+        "categoryId": "R0-%-VTT"
+      }
+    ]
+  },
+  "dataRowMapping": {
+    "NO_GROUP~**~R0-%-Amarilla": {
+      "AC": 14933013,
+      "WATERFALL_AC": [
+        14933013,
+        0,
+        14933013
+      ]
+    },
+    "NO_GROUP~**~R0-%-Carretera": {
+      "AC": 11988503,
+      "WATERFALL_AC": [
+        11988503,
+        14933013,
+        26921516
+      ]
+    },
+    "NO_GROUP~**~R0-%-Montana": {
+      "AC": 13276047,
+      "WATERFALL_AC": [
+        13276047,
+        26921516,
+        40197563
+      ]
+    },
+    "NO_GROUP~**~R0-%-Paseo": {
+      "AC": 28213704,
+      "WATERFALL_AC": [
+        28213704,
+        40197563,
+        68411267
+      ]
+    },
+    "NO_GROUP~**~R0-%-Velo": {
+      "AC": 15944067,
+      "WATERFALL_AC": [
+        15944067,
+        68411267,
+        84355334
+      ]
+    },
+    "NO_GROUP~**~R0-%-VTT": {
+      "AC": 17477314,
+      "WATERFALL_AC": [
+        17477314,
+        84355334,
+        101832648
+      ]
+    },
+    "AVERAGE_GROUP~**~R0-%-Amarilla": {
+      "AC": 14933013,
+      "WATERFALL_AC": [
+        14933013,
+        0,
+        14933013
+      ]
+    },
+    "TOTAL_GROUP~**~R0-%-Amarilla": {
+      "AC": 14933013,
+      "WATERFALL_AC": [
+        14933013,
+        0,
+        14933013
+      ]
+    },
+    "AVERAGE_GROUP~**~R0-%-Carretera": {
+      "AC": 11988503,
+      "WATERFALL_AC": [
+        11988503,
+        14933013,
+        26921516
+      ]
+    },
+    "TOTAL_GROUP~**~R0-%-Carretera": {
+      "AC": 11988503,
+      "WATERFALL_AC": [
+        11988503,
+        14933013,
+        26921516
+      ]
+    },
+    "AVERAGE_GROUP~**~R0-%-Montana": {
+      "AC": 13276047,
+      "WATERFALL_AC": [
+        13276047,
+        26921516,
+        40197563
+      ]
+    },
+    "TOTAL_GROUP~**~R0-%-Montana": {
+      "AC": 13276047,
+      "WATERFALL_AC": [
+        13276047,
+        26921516,
+        40197563
+      ]
+    },
+    "AVERAGE_GROUP~**~R0-%-Paseo": {
+      "AC": 28213704,
+      "WATERFALL_AC": [
+        28213704,
+        40197563,
+        68411267
+      ]
+    },
+    "TOTAL_GROUP~**~R0-%-Paseo": {
+      "AC": 28213704,
+      "WATERFALL_AC": [
+        28213704,
+        40197563,
+        68411267
+      ]
+    },
+    "AVERAGE_GROUP~**~R0-%-Velo": {
+      "AC": 15944067,
+      "WATERFALL_AC": [
+        15944067,
+        68411267,
+        84355334
+      ]
+    },
+    "TOTAL_GROUP~**~R0-%-Velo": {
+      "AC": 15944067,
+      "WATERFALL_AC": [
+        15944067,
+        68411267,
+        84355334
+      ]
+    },
+    "AVERAGE_GROUP~**~R0-%-VTT": {
+      "AC": 17477314,
+      "WATERFALL_AC": [
+        17477314,
+        84355334,
+        101832648
+      ]
+    },
+    "TOTAL_GROUP~**~R0-%-VTT": {
+      "AC": 17477314,
+      "WATERFALL_AC": [
+        17477314,
+        84355334,
+        101832648
+      ]
+    },
+    "NO_GROUP~**~TOTAL_DATA_ROW": {
+      "AC": 101832648,
+      "WATERFALL_AC": [
+        101832648,
+        0,
+        101832648
+      ]
+    },
+    "NO_GROUP~**~AVERAGE_DATA_ROW": {
+      "AC": 16972108,
+      "WATERFALL_AC": [
+        16972108,
+        0,
+        16972108
+      ]
+    },
+    "TOTAL_GROUP~**~TOTAL_DATA_ROW": {
+      "AC": 101832648,
+      "WATERFALL_AC": [
+        101832648,
+        0,
+        101832648
+      ]
+    },
+    "TOTAL_GROUP~**~AVERAGE_DATA_ROW": {
+      "AC": 16972108,
+      "WATERFALL_AC": [
+        16972108,
+        0,
+        16972108
+      ]
+    },
+    "AVERAGE_GROUP~**~TOTAL_DATA_ROW": {
+      "AC": 101832648,
+      "WATERFALL_AC": [
+        101832648,
+        0,
+        101832648
+      ]
+    },
+    "AVERAGE_GROUP~**~AVERAGE_DATA_ROW": {
+      "AC": 16972108,
+      "WATERFALL_AC": [
+        16972108,
+        0,
+        16972108
+      ]
+    }
+  }
+}
