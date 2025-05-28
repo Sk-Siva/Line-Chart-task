@@ -15,13 +15,35 @@ fetch('./singleMesDs.json')
       return { category: row.categoryId, value };
     });
 
+    //Mean
+    const values = data.map(d => d.value);
+    const mean = values.reduce((sum, val) => sum + val, 0) / values.length;
+
+    //Moving Range
+    const movingRanges = [];
+    for (let i = 1; i < values.length; i++) {
+      movingRanges.push(Math.abs(values[i] - values[i - 1]));
+    }
+
+    const avgMR = movingRanges.reduce((sum, val) => sum + val, 0) / movingRanges.length;
+    const d2 = 1.128; //Constant
+    const sigma = avgMR / d2;
+
+    const UCL = mean + 3 * sigma;
+    const LCL = mean - 3 * sigma;
+
+    const yMin = Math.min(LCL, ...values);
+    const yMax = Math.max(UCL, ...values);
+
+    //Categorical X Axis
     const xScale = d3.scaleBand()
       .domain(categories)
       .range([0, width])
       .padding(0.1);
 
+    //Continous Y Axis
     const yScale = d3.scaleLinear()
-      .domain([10000000, 30000000])
+      .domain([yMin, yMax])
       .range([height, 0]);
 
     ctx.translate(margin.left, margin.top);
@@ -42,10 +64,10 @@ fetch('./singleMesDs.json')
     //Y Lables
     ctx.fillStyle = "#000";
     ctx.textAlign = "right";
-    const yTicks = yScale.ticks(5);
+    const yTicks = yScale.ticks(10);
     yTicks.forEach(tick => {
       const y = yScale(tick);
-      ctx.fillText((tick / 1000000) + 'M', -10, y);
+      ctx.fillText((tick / 1000000).toFixed(1) + 'M', -10, y);
     });
 
     //X Labels
@@ -56,11 +78,35 @@ fetch('./singleMesDs.json')
       ctx.fillText(cat.split('R0-%-')[1], x, height + 5);
     });
 
-    //Line Chart
+    // Center Line
     ctx.beginPath();
-    ctx.strokeStyle = '#4CA5E4';
-    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#000000';
+    ctx.setLineDash([]);
+    ctx.moveTo(0, yScale(mean));
+    ctx.lineTo(width, yScale(mean));
+    ctx.stroke();
 
+    // UCL & LCL
+    ctx.setLineDash([5, 5]);
+    ctx.strokeStyle = 'blue';
+
+    ctx.beginPath();
+    ctx.moveTo(0, yScale(UCL));
+    ctx.lineTo(width, yScale(UCL));
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(0, yScale(LCL));
+    ctx.lineTo(width, yScale(LCL));
+    ctx.stroke();
+
+    ctx.setLineDash([]);
+
+
+    // Data Line
+    ctx.beginPath();
+    ctx.strokeStyle = 'grey';
+    ctx.lineWidth = 2;
     data.forEach((d, i) => {
       const x = xScale(d.category) + xScale.bandwidth() / 2;
       const y = yScale(d.value);
@@ -73,14 +119,14 @@ fetch('./singleMesDs.json')
     ctx.stroke();
 
     //Data Points
-    ctx.fillStyle = 'blue';
+    ctx.fillStyle = 'grey';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'bottom';
     data.forEach(d => {
       const x = xScale(d.category) + xScale.bandwidth() / 2;
       const y = yScale(d.value);
       ctx.beginPath();
-      ctx.arc(x, y, 2, 0, 2 * Math.PI);
+      ctx.arc(x, y, 3, 0, 2 * Math.PI);
       ctx.fill();
       ctx.fillText((d.value / 1000000).toFixed(1) + 'M', x, y - 6);
     });
