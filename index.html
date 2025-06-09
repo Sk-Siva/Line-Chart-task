@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Line Chart Task</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+    }
+
+    .chart-select {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
+
 <body>
-    <canvas id="chartCanvas" width="1000" height="500"></canvas>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="lineChart.js"></script>
+  <div class="chart-select">
+    <label for="chartType">Select Chart</label>
+    <select id="chartType">
+      <option value="line">Line Chart</option>
+      <option value="i">I Chart</option>
+    </select>
+  </div>
+
+  <canvas id="chartCanvas" width="800" height="400"></canvas>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script type="module" src="./main.js"></script>
+
+
 </body>
+
 </html>
